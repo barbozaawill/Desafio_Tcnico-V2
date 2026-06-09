@@ -19,7 +19,7 @@ namespace AppFinanceiro.WebApp
 
             if (!IsPostBack)
             {
-                // Se veio um id na URL, é edição
+                // Se veio um id na URL é edição
                 if (!string.IsNullOrEmpty(Request.QueryString["id"]))
                 {
                     int id = int.Parse(Request.QueryString["id"]);
@@ -27,7 +27,7 @@ namespace AppFinanceiro.WebApp
                 }
                 else
                 {
-                    // novo lançamento — mostra painel de desconto por padrão (Crédito)
+                    // novo lançamento que mostra painel de desconto por padrão (Crédito)
                     pnlDesconto.Visible = true;
                     pnlTaxa.Visible = false;
                 }
