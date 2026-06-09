@@ -1,27 +1,42 @@
-# AppFinanceiro
+Ôªø# AppFinanceiro
 
-AplicaÁ„o web de controle de lanÁamentos financeiros desenvolvida com ASP.NET Web Forms, C# e SQL Server.
+Aplica√ß√£o web de controle de lan√ßamentos financeiros desenvolvida com ASP.NET Web Forms, C# e SQL Server.
 
 ## Tecnologias
 
-- **Front-end:** ASP.NET Web Forms (.aspx) ó .NET Framework 4.8
+- **Front-end:** ASP.NET Web Forms (.aspx) ‚Äî .NET Framework 4.8
 - **Back-end:** C# em Class Libraries
 - **Banco de Dados:** SQL Server (LocalDB para desenvolvimento)
 - **Acesso a dados:** ADO.NET puro (SqlConnection, SqlCommand, SqlDataReader)
 
 ## Estrutura do Projeto
 
-AppFinanceiro.Data        ? Entidades, enums e repositÛrios (ADO.NET)
-AppFinanceiro.Business    ? Regras de negÛcio, validaÁıes e serviÁos
-AppFinanceiro.WebApp      ? P·ginas .aspx e code-behind
+AppFinanceiro.Data        ‚Üí Entidades, enums e reposit√≥rios (ADO.NET)
+AppFinanceiro.Business    ‚Üí Regras de neg√≥cio, valida√ß√µes e servi√ßos
+AppFinanceiro.WebApp      ‚Üí P√°ginas .aspx e code-behind
 
 
-## Decisıes tÈcnicas
+## Decis√µes t√©cnicas
 
-**Por onde comeÁar:** Comecei o desenvolvimento pelo banco de dados porque isso me ajudou a enxergar melhor como o sistema seria estruturado. Durante a modelagem, consegui entender quais dados eu precisaria armazenar, como eles se relacionavam e quais regras deveriam existir. Com isso em mente, ficou mais f·cil desenvolver as outras camadas da aplicaÁ„o.
+**Por onde come√ßar:** Comecei o desenvolvimento pelo banco de dados porque isso me ajudou a enxergar melhor como o sistema seria estruturado. Durante a modelagem, consegui entender quais dados eu precisaria armazenar, como eles se relacionavam e quais regras deveriam existir. Com isso em mente, ficou mais f√°cil desenvolver as outras camadas da aplica√ß√£o.
 
-**Tipo `TINYINT` para Status:** Escolhi o tipo TINYINT no campo Status porque ele armazena apenas alguns valores numÈricos prÈ-definidos, como Aberto, Pago e Cancelado. Como n„o h· necessidade de armazenar texto nesse campo, preferi utilizar TINYINT. J· o tipo CHAR foi utilizado em campos que representam caracteres, como o campo Tipo, que identifica se o lanÁamento È CrÈdito ou DÈbito.
+**Tipo TINYINT para Status:** Escolhi o tipo TINYINT no campo Status porque ele armazena apenas alguns valores num√©ricos pr√©-definidos, como Aberto, Pago e Cancelado. Como n√£o h√° necessidade de armazenar texto nesse campo, preferi utilizar TINYINT. J√° o tipo CHAR foi utilizado em campos que representam caracteres, como o campo Tipo, que identifica se o lan√ßamento √© Cr√©dito ou D√©bito.
 
-**Constraints no banco de dados:** AlÈm das validaÁıes feitas na camada de negÛcio, tambÈm adicionei constraints no banco de dados para garantir que os dados continuem consistentes. Pensei nelas como uma camada extra de seguranÁa: mesmo que alguma validaÁ„o da aplicaÁ„o venha a falhar, o banco ainda impede que informaÁıes inv·lidas sejam salvas. Um exemplo È a regra que permite Taxa apenas para DÈbito e Desconto apenas para CrÈdito.
+**Constraints no banco de dados:** Al√©m das valida√ß√µes feitas na camada de neg√≥cio, tamb√©m adicionei constraints no banco de dados para garantir que os dados continuem consistentes. Pensei nelas como uma camada extra de seguran√ßa: mesmo que alguma valida√ß√£o da aplica√ß√£o venha a falhar, o banco ainda impede que informa√ß√µes inv√°lidas sejam salvas. Um exemplo √© a regra que permite Taxa apenas para D√©bito e Desconto apenas para Cr√©dito.
 
-**SeparaÁ„o em camadas:** Optei por dividir o projeto em trÍs camadas: Data, Business e WebApp. Com isso, cada parte ficou respons·vel por uma funÁ„o especÌfica, deixando o cÛdigo mais organizado e f·cil de entender. A camada Data cuida do banco de dados, a Business das regras e validaÁıes, e a WebApp da interface com o usu·rio. TambÈm pensei em separar algumas validaÁıes em uma classe especÌfica, como um LancamentoService, o que deixaria o projeto ainda mais organizado. PorÈm, como o objetivo era a entrega da atividade e o projeto n„o possui uma complexidade t„o grande, preferi manter essas validaÁıes na camada Business para deixar a implementaÁ„o mais simples.
+**Separa√ß√£o em camadas:** Optei por dividir o projeto em tr√™s camadas: Data, Business e WebApp. Com isso, cada parte ficou respons√°vel por uma fun√ß√£o espec√≠fica, deixando o c√≥digo mais organizado e f√°cil de entender. A camada Data cuida do banco de dados, a Business das regras e valida√ß√µes, e a WebApp da interface com o usu√°rio. Tamb√©m pensei em separar algumas valida√ß√µes em uma classe espec√≠fica, como um LancamentoService, o que deixaria o projeto ainda mais organizado. Por√©m, como o objetivo era a entrega da atividade e o projeto n√£o possui uma complexidade t√£o grande, preferi manter essas valida√ß√µes na camada Business para deixar a implementa√ß√£o mais simples.
+
+## Pr√©-requisitos
+
+- Visual Studio 2022
+- .NET Framework 4.8
+- SQL Server LocalDB (j√° incluso no Visual Studio)
+
+## Como rodar
+
+1. Clone o reposit√≥rio
+2. Abra o arquivo AppFinanceiro.sln no Visual Studio
+3. No **SQL Server Object Explorer**, crie um banco chamado FinanceiroDB
+4. Execute o script em AppFinanceiro.Data/Scripts/script.sql
+5. Defina AppFinanceiro.WebApp como projeto de inicializa√ß√£o
+6. Pressione F5 para rodar
