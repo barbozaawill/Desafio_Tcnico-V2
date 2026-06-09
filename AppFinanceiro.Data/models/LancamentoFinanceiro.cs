@@ -4,6 +4,14 @@ public class LancamentoFinanceiro
 {
     public int Id { get; set; }
     public string Descricao { get; set; }
+    public string TipoDescricao => Tipo == Tipo.Credito ? "Crédito" : "Débito";
+    public string StatusDescricao => Status switch
+    {
+        StatusLancamento.Aberto => "Aberto",
+        StatusLancamento.Pago => "Pago",
+        StatusLancamento.Cancelado => "Cancelado",
+        _ => "Desconhecido"
+    };
     public Tipo Tipo { get; set; }
     public decimal ValorOriginal{ get; set; }
     public decimal? PercentualTaxa { get; set; }

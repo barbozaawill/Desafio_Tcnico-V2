@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.Business", "..\AppFinanceiro.Business\AppFinanceiro.Business.csproj", "{B57589B6-53BC-0D14-CC6D-F9DD26708113}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.Business", "AppFinanceiro.Business\AppFinanceiro.Business.csproj", "{15B5E942-1EE9-E304-0F96-82E2AEE4CD47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.Data", "..\AppFinanceiro.Data\AppFinanceiro.Data.csproj", "{0BF90CD2-0202-ED62-391C-0E2461464004}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.Data", "AppFinanceiro.Data\AppFinanceiro.Data.csproj", "{D42F340C-A62B-CD68-E39D-619F41C969D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.WebApp", "..\AppFinanceiro.WebApp\AppFinanceiro.WebApp.csproj", "{77D298C9-FC9E-4A39-ADF6-0484B51C7CE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.WebApp", "AppFinanceiro.WebApp\AppFinanceiro.WebApp.csproj", "{77D298C9-FC9E-4A39-ADF6-0484B51C7CE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +15,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B57589B6-53BC-0D14-CC6D-F9DD26708113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B57589B6-53BC-0D14-CC6D-F9DD26708113}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B57589B6-53BC-0D14-CC6D-F9DD26708113}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B57589B6-53BC-0D14-CC6D-F9DD26708113}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BF90CD2-0202-ED62-391C-0E2461464004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BF90CD2-0202-ED62-391C-0E2461464004}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BF90CD2-0202-ED62-391C-0E2461464004}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BF90CD2-0202-ED62-391C-0E2461464004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B5E942-1EE9-E304-0F96-82E2AEE4CD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B5E942-1EE9-E304-0F96-82E2AEE4CD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B5E942-1EE9-E304-0F96-82E2AEE4CD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B5E942-1EE9-E304-0F96-82E2AEE4CD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42F340C-A62B-CD68-E39D-619F41C969D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42F340C-A62B-CD68-E39D-619F41C969D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42F340C-A62B-CD68-E39D-619F41C969D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42F340C-A62B-CD68-E39D-619F41C969D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{77D298C9-FC9E-4A39-ADF6-0484B51C7CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{77D298C9-FC9E-4A39-ADF6-0484B51C7CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77D298C9-FC9E-4A39-ADF6-0484B51C7CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU

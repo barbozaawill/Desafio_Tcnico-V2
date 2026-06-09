@@ -50,7 +50,7 @@ namespace AppFinanceiro.Data.Repositories
                         {
                             Id = (int)reader["Id"],
                             Descricao = reader["Descricao"].ToString(),
-                            Tipo = (Tipo)(char)reader["Tipo"],
+                            Tipo = (Tipo)reader["Tipo"].ToString()[0],
                             ValorOriginal = (decimal)reader["ValorOriginal"],
                             PercentualTaxa = reader["PercentualTaxa"] as decimal?,
                             PercentualDesconto = reader["PercentualDesconto"] as decimal?,
@@ -60,7 +60,7 @@ namespace AppFinanceiro.Data.Repositories
                             DataPagamento = reader["DataPagamento"] as DateTime?,
                             DataCancelamento = reader["DataCancelamento"] as DateTime?,
                             Competencia = reader["Competencia"].ToString(),
-                            Status = (StatusLancamento)(int)reader["Status"]
+                            Status = (StatusLancamento)Convert.ToInt32(reader["Status"])
                         };
                     }
                 }
@@ -84,7 +84,7 @@ namespace AppFinanceiro.Data.Repositories
                         {
                             Id = (int)reader["Id"],
                             Descricao = reader["Descricao"].ToString(),
-                            Tipo = (Tipo)(char)reader["Tipo"],
+                            Tipo = (Tipo)reader["Tipo"].ToString()[0],
                             ValorOriginal = (decimal)reader["ValorOriginal"],
                             PercentualTaxa = reader["PercentualTaxa"] as decimal?,
                             PercentualDesconto = reader["PercentualDesconto"] as decimal?,
@@ -94,7 +94,7 @@ namespace AppFinanceiro.Data.Repositories
                             DataPagamento = reader["DataPagamento"] as DateTime?,
                             DataCancelamento = reader["DataCancelamento"] as DateTime?,
                             Competencia = reader["Competencia"].ToString(),
-                            Status = (StatusLancamento)(int)reader["Status"]
+                            Status = (StatusLancamento)Convert.ToInt32(reader["Status"])
                         });
                     }
                 }
@@ -180,7 +180,7 @@ namespace AppFinanceiro.Data.Repositories
                         {
                             Id = (int)reader["Id"],
                             Descricao = reader["Descricao"].ToString(),
-                            Tipo = (Tipo)(char)reader["Tipo"],
+                            Tipo = (Tipo)reader["Tipo"].ToString()[0],
                             ValorOriginal = (decimal)reader["ValorOriginal"],
                             PercentualTaxa = reader["PercentualTaxa"] as decimal?,
                             PercentualDesconto = reader["PercentualDesconto"] as decimal?,
@@ -190,7 +190,7 @@ namespace AppFinanceiro.Data.Repositories
                             DataPagamento = reader["DataPagamento"] as DateTime?,
                             DataCancelamento = reader["DataCancelamento"] as DateTime?,
                             Competencia = reader["Competencia"].ToString(),
-                            Status = (StatusLancamento)(int)reader["Status"]
+                            Status = (StatusLancamento)Convert.ToInt32(reader["Status"])
                         });
                     }
                 }
